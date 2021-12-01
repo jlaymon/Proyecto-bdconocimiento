@@ -1,0 +1,264 @@
+/*@font-face{
+  font-family: charter;
+  src: url('./fonts/fonts/charter-regular.otf');
+  font-style:normal;
+  font-weight:400;
+}
+@font-face{
+  font-family: charter;
+  src: url('./fonts/fonts/charter-italic.otf');
+  font-style:italic;
+  font-weight:400;
+}
+@font-face{
+  font-family: charter;
+  src: url('./fonts/fonts/charter-bold.otf');
+  font-style:normal;
+  font-weight:bold;
+}
+@font-face{
+  font-family: charter;
+  src: url('./fonts/fonts/charter-bold-italic.otf');
+  font-style:italic;
+  font-weight:bold;
+}
+*/
+:root{
+  font-size: 18px;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  color: #212121;
+  font-family: 'Roboto', sans-serif;
+  /*font-size: 60px; */
+  /*font-size: 15px;*/
+  background-color:#F6F6F6;
+  margin: 0;
+
+}
+a{
+  color: #191A19;
+}
+header{
+  background-color: #F6F6F6;
+  font-size: 14px;
+  color: #1E5128;
+  width: 188px;
+  margin-left: 10px;
+  position: absolute;
+  top: 64px;
+  left: -232px;
+  z-index: 1;
+
+}
+
+header a {
+  color: #1E5128;
+  text-decoration:none;
+  transition: .1s;
+}
+header a:hover{
+  background-color: #D8E9A8;
+}
+header li{
+  margin-bottom: 16px;
+}
+
+
+nav details summary{
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h1{
+   font-size: 60px;
+   margin-top: 64px;
+   margin-bottom: 16px;
+   font-weight: normal;
+  /* margin: 64px 10px 16px 10px;*/
+  /*border: 1px solid red;*/
+}
+h1 ~ p{
+  margin-bottom: 64px;
+}
+
+.hr_header{
+ margin-top: 5px;
+  color: #99A799;
+  border: 1px solid ;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: hr_header;
+    animation-name: hr_header;
+}
+
+@keyframes hr_header {
+  from{
+    opacity: 0;
+    -webkit-tranform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+  to{
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+}
+
+hr{
+  margin: 64px 0px;
+}
+
+h2{
+  font-size: 2em;
+  margin: 40px 0px;
+  font-weight: normal;
+}
+h3{
+  font-size: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  
+}
+
+.main{
+
+}
+
+.wrapper{
+  width: 902px;
+  margin: auto;
+  background: #F9F9F9;
+  
+}
+
+.main-content{
+  background: white;
+}
+
+pre{
+  background: #FEC62E;
+  padding: 40px;
+  font-family: 'Roboto';
+  line-height: 24px;
+
+
+}
+
+blockquote{
+  font-size: 24px;
+  margin: 32px 0px;
+  padding-left: 16px;
+  /*border: 1px solid red;*/
+  border-left: 4px solid #424242;
+  line-height: 24px;
+}
+
+blockquote span{
+  color: #99A799;
+}
+
+blockquote span::before{
+  content: '-';
+}
+
+.header{
+  position: sticky;
+  top: 0;
+}
+.header-content{
+  position: relative;
+}
+.hero{
+  /*background: linear-gradient(180deg, rgba(241,241,247,1) 0%, rgba(43,107,12,1) 0%, rgba(16,74,40,1) 96%);*/
+  background: #1E5128;
+  height: 120px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: hero;
+    animation-name: hero;
+  
+  /*background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+*/
+}
+
+@keyframes hero {
+  from{
+    opacity: 0;
+    -webkit-tranform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+  to{
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+}
+
+.hero img{ 
+  margin: 20px ;
+  width: 135px;
+  height: 80px;
+  
+
+}
+.img_dom{
+  width: 900px;
+  height: 470px;
+}
+.section-content + hr{
+  display: none;
+}
+.section-content ol li{
+  line-height: 24px;
+}
+.section-content ul li{
+margin-bottom: 16px;
+}
+.section-content {
+  counter-reset: titleList;
+  
+
+}
+.section-content:first-of-type{
+  margin: 0px;
+}
+.section-content img{
+  margin-top: 40px;
+}
+.section-content h3{
+  counter-increment: titleList;
+  padding-bottom: 8px;
+  position: relative;
+}
+.section-content h3::before{
+  content: counter(titleList,decimal)'.';
+}
+
+.section-content h3::after{
+  content: '';
+  width: 80px;
+  height: 4px;
+  background:#424242;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+}
+
+/*::selection{
+  background:#99A799;
+}
+*/
